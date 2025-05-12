@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🧩 JSON Explorer Tree</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Fredoka+One&display=swap');
+
+  body {
+    font-family: 'Indie Flower', cursive;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #2d2d2d;
+    padding: 40px;
+  }
+  h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    text-align: center;
+    color: #ff006e;
+    margin-bottom: 30px;
+  }
+  details {
+    background: #ffffffc9;
+    border-radius: 10px;
+    border: 2px dashed #ff70a6;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+  }
+  details:hover {
+    background-color: #fff0f6;
+  }
+  summary {
+    font-size: 1.2em;
+    color: #5c2a9d;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .text-blurb {
+    margin: 8px 0 8px 20px;
+    font-size: 1.05em;
+    background: #fdfcdc;
+    padding: 10px;
+    border-left: 4px solid #ffd166;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+<h1>🧩 Interactive JSON Explorer</h1>
+<details open><summary>🧠 <strong>The betrothed (i promessi sposi) - conceptual map</strong> 🌟</summary>
+  <details open><summary>📂 <strong>Capitolo i: don abbondio's encounter</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A timid village priest, confronted by powerful forces beyond his control.</p>
+    </details>
+    <details open><summary>📂 <strong>Don rodrigo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Local nobleman and antagonist, seeking to prevent Renzo and Lucia's marriage.</p>
+    </details>
+    <details open><summary>📂 <strong>The bravi</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Don Rodrigo’s henchmen who intimidate Don Abbondio to block the wedding.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Don Abbondio is threatened by Don Rodrigo’s bravi and forced to delay the marriage of Renzo and Lucia.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo ii: renzo and don abbondio</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo tramaglino</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A young, honest silk worker striving to marry his beloved Lucia, confused by obstacles.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia mondella</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Renzo’s devoted fiancée, caught in the crossfire of Don Rodrigo's designs.</p>
+    </details>
+    <details open><summary>📂 <strong>Perpetua</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Don Abbondio’s loyal housekeeper who hints at deeper troubles affecting the wedding.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Renzo, puzzled by Don Abbondio’s evasiveness, begins to uncover the external interference in his wedding plans.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo iii: lucia’s confession and the new plan</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Opens up about Don Rodrigo’s harassment and seeks protection.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Lucia’s pragmatic and resourceful mother, determined to help her daughter.</p>
+    </details>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A Capuchin friar, taking on the role of advisor and protector to Lucia and her family.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Lucia, Agnese, and Fra Cristoforo come together to seek legal assistance to defend Lucia from Don Rodrigo.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo iv: fra cristoforo’s backstory</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Once Lodovico, a nobleman who sought redemption; his past fuels his compassion for the oppressed.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 The chapter traces Fra Cristoforo’s transformation from violent noble to humble friar and defender of the weak.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo v: the mission to don rodrigo</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Courageously sets out to confront Don Rodrigo, risking his own safety.</p>
+    </details>
+    <details open><summary>📂 <strong>Don rodrigo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A symbol of arrogant power, unrepentant and menacing.</p>
+    </details>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Trusts Fra Cristoforo to advocate for his future.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Fra Cristoforo decides to directly face Don Rodrigo in defense of Renzo and Lucia’s rights.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo vi: fra cristoforo and don rodrigo</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Firmly stands for justice and charity during his tense encounter.</p>
+    </details>
+    <details open><summary>📂 <strong>Don rodrigo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Refuses to listen, embodying tyranny and contempt.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A dramatic meeting: Fra Cristoforo’s moral strength clashes with Don Rodrigo’s pride and threats.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo vii: the elopement plot</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Crafts a bold and clever plan to force Don Abbondio to perform the wedding.</p>
+    </details>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Agrees to the risky plot out of desperation to be with Lucia.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Reluctantly involved in the plot, torn between love and fear.</p>
+    </details>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Caught off guard by their plot, representing clergy’s fearfulness.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A clandestine plan is made to surprise Don Abbondio and ensure the marriage through legal loopholes.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo viii: the failed 'marriage by surprise'</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Attempts the plot but it ends in confusion.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Deeply distressed by the failure and its consequences.</p>
+    </details>
+    <details open><summary>📂 <strong>Tonio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A friend aiding Renzo in the plan.</p>
+    </details>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Flees in panic, exacerbating the crisis.</p>
+    </details>
+    <details open><summary>📂 <strong>Perpetua</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Witnesses the commotion, alarmed.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 The forced wedding scheme backfires, leading to greater danger for the protagonists.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo ix: fleeing the village</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Forced to leave his home and all he knows.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Flees with Renzo and Agnese to escape Don Rodrigo’s fury.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Guides her child and Renzo in their desperate flight.</p>
+    </details>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Organizes their escape as protector.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Renzo, Lucia, and Agnese abandon their village, setting off separately to hide from Don Rodrigo’s men.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo x: lucia at monza</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Seeks sanctuary in the convent at Monza, encountering new dangers.</p>
+    </details>
+    <details open><summary>📂 <strong>Gertrude (monaca di monza)</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A flawed, conflicted nun who ultimately betrays Lucia.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Parts with Lucia, worried and powerless.</p>
+    </details>
+    <details open><summary>📂 <strong>Egidio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Gertrude’s dark associate, a threat lurking within the convent.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Lucia finds temporary safety at the convent but falls under the shadow of Gertrude’s secrets.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo xi: renzo in milan — the bread revolt</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Arrives to Milan, swept up in social unrest.</p>
+    </details>
+    <details open><summary>📂 <strong>Milanese citizens</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Desperate and volatile, rioting over high bread prices.</p>
+    </details>
+    <details open><summary>📂 <strong>City officials</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Struggle to control the chaos.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Renzo is caught in a violent bread riot in Milan and becomes wrongly implicated by the authorities.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo xii: renzo on the run</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Fugitive, barely escaping capture after the Milan riots.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Renzo must flee Milan, with his future and Lucia’s fate growing even more uncertain.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo xiii: renzo's escape, lucia's abduction</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Escapes the law but is separated from Lucia.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Victim of betrayal and abduction.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Left in anguish for her daughter’s safety.</p>
+    </details>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Worries for both Renzo and Lucia.</p>
+    </details>
+    <details open><summary>📂 <strong>Gertrude</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Betrays Lucia to Don Rodrigo’s agents under blackmail.</p>
+    </details>
+    <details open><summary>📂 <strong>Egidio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Collaborates in Lucia’s abduction.</p>
+    </details>
+    <details open><summary>📂 <strong>Griso</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Don Rodrigo’s man, executor of the kidnapping.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Lucia is kidnapped due to Gertrude’s betrayal; Renzo’s situation deteriorates as he becomes a wanted man.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo xiv: lucia in captivity, renzo’s fate</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Held prisoner by the notoriously ruthless Innominato.</p>
+    </details>
+    <details open><summary>📂 <strong>Innominato (unnamable)</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A fearsome local warlord, troubled by Lucia’s innocence.</p>
+    </details>
+    <details open><summary>📂 <strong>Don rodrigo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Ensures Lucia's captivity but starts losing control.</p>
+    </details>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Assumes a new identity and seeks work, always thinking of Lucia.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Lucia endures captivity, while Renzo struggles for survival and both pine for each other.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo xv: the conversion</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Innominato</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Haunted by guilt, seeks counsel and redemption.</p>
+    </details>
+    <details open><summary>📂 <strong>Cardinal borromeo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Represents forgiveness and hope, guiding the Innominato’s conversion.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Her innocence and faith spark the Innominato’s conscience.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 The Innominato, moved by Lucia and inspired by Cardinal Borromeo, undergoes a profound conversion and frees Lucia.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo xvi: after lucia's release</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Innominato</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A reformed soul, now aiding the oppressed.</p>
+    </details>
+    <details open><summary>📂 <strong>Don rodrigo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Loses his power and vanishes as justice rebalances.</p>
+    </details>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Worries for his own safety amid shifting power.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Reunited with Lucia, relieved.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Liberated and able to hope again.</p>
+    </details>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Continues to counsel the protagonists.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Lucia is freed; some threats fade as power realigns, offering a lull after turmoil.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitoli xvii–xviii: war, famine, and plague</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Faces many dangers as external disasters worsen.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Endures further hardship and separation.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Suffers alongside her child and neighbors.</p>
+    </details>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Attempts to weather the storm with caution.</p>
+    </details>
+    <details open><summary>📂 <strong>Don rodrigo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Struggles amid chaos.</p>
+    </details>
+    <details open><summary>📂 <strong>Milanese people</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Collectively bear witness to the devastation.</p>
+    </details>
+    <details open><summary>📂 <strong>Cardinal borromeo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A beacon of hope and charity amid disaster.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 War, famine, and plague devastate the land, putting every character’s endurance to the test.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitoli xix–xxi: fate of the characters</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Begins to rebuild life after surviving the plague.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Protected, still separated but clinging to hope.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Steadfast, working for reunion.</p>
+    </details>
+    <details open><summary>📂 <strong>Don rodrigo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Loses influence, his fate sealed.</p>
+    </details>
+    <details open><summary>📂 <strong>Innominato</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Acts as a patron of the poor and repentant.</p>
+    </details>
+    <details open><summary>📂 <strong>Cardinal borromeo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Continues to heal and unify the region.</p>
+    </details>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 His fears subside as danger wanes.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 After the storm, hope gradually returns: characters’ fortunes improve and Don Rodrigo’s tyranny ends.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitoli xxii–xxxvii: plague and reunion</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Desperately searches for Lucia through plague-ravaged Milan.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Kept to a vow, lost amid the lazzaretto.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Never gives up on her child’s happiness.</p>
+    </details>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Anxious, experiences personal growth.</p>
+    </details>
+    <details open><summary>📂 <strong>Innominato</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Continues charitable work.</p>
+    </details>
+    <details open><summary>📂 <strong>Cardinal borromeo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Leads spiritual recovery from suffering.</p>
+    </details>
+    <details open><summary>📂 <strong>Fra cristoforo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Facilitates Lucia’s release from her vow and blesses the reunion.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 During the Milanese plague, Renzo finds Lucia; vows are lifted, and the couple looks towards the future together.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Capitolo xxxviii: conclusion</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Renzo</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Finally marries Lucia, symbolizing hope fulfilled.</p>
+    </details>
+    <details open><summary>📂 <strong>Lucia</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Achieves peace and happiness after trials.</p>
+    </details>
+    <details open><summary>📂 <strong>Agnese</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Rejoices as her family is reunited.</p>
+    </details>
+    <details open><summary>📂 <strong>Don abbondio</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Returns to ordinary life, now free from terror.</p>
+    </details>
+    <details open><summary>📂 <strong>The widow</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 A helpful new patroness.</p>
+    </details>
+    <details open><summary>📂 <strong>New patrons</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Contribute to the protagonists’ fresh start.</p>
+    </details>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 Renzo and Lucia marry and begin a new life, their journey a powerful story of hope, virtue, and faith triumphing over adversity.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Bonus summary — synthetic overview of the novel</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 _The Betrothed_ recounts the tribulations of Renzo and Lucia as they confront injustice, violence, and personal trials in 17th-century Lombardy. Their struggles and the support of figures like Fra Cristoforo, the Innominato, and Cardinal Borromeo illustrate the enduring power of community, faith, and resilience. The novel explores how individuals withstand overwhelming odds, transforming suffering into redemption and hope through solidarity and forgiveness.</p>
+    </details>
+  </details>
+  <details open><summary>📂 <strong>Key themes and overarching relationships</strong> 🌟</summary>
+    <details open><summary>📂 <strong>Summary</strong> 🌟</summary>
+      <p class='text-blurb'>🔸 The story celebrates the dignity of ordinary people, explores the clash between oppression and justice, and upholds faith, humility, and community solidarity as antidotes to chaos and tyranny. The events triggered by Don Rodrigo, the transformation of antagonists, and the backdrop of historical catastrophe reveal the interplay of individual character and collective destiny, culminating in a message of hope and renewal.</p>
+    </details>
+  </details>
+</details>
+
+<p style='text-align:center;'>🔍 This tree adapts to <strong>any</strong> JSON structure — deeply nested, irregular, or totally wild!</p>
+</body>
+</html>
