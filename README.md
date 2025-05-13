@@ -33,7 +33,7 @@ The notebook walks through the process of building a basic chatbot using LangGra
 
 ## 🕸️ Graph Structure
 
-The graph defined in `assignment.ipynb` is a **stateful workflow** composed of modular nodes, each responsible for handling a specific part of the agent’s logic. Here's a high-level overview:
+The graph defined in `map_creation.ipynb` is a **stateful workflow** composed of modular nodes, each responsible for handling a specific part of the agent’s logic. Here's a high-level overview:
 
 * **Input Node**: Receives user input and updates the conversation state.
 * **Planner Node**: Uses a language model to generate a high-level plan based on the input.
