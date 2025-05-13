@@ -18,7 +18,7 @@ LangGraph-map-creation/
 └── README.md
 ```
 
-## 📓 Notebook Overview: `assignment.ipynb`
+## 📓 Notebook Overview: `map_creation.ipynb`
 
 The notebook walks through the process of building a basic chatbot using LangGraph to perform Retrieval Augmented Generation. Key components include:
 
@@ -29,6 +29,35 @@ The notebook walks through the process of building a basic chatbot using LangGra
 * **Graph Construction**: Assembling the nodes into a `StateGraph`, specifying the flow of data and control between nodes.
 
 * **Execution**: Compiling and running the graph to simulate a conversation, demonstrating how the chatbot responds to user inputs.
+
+
+## 🕸️ Graph Structure
+
+The graph defined in `assignment.ipynb` is a **stateful workflow** composed of modular nodes, each responsible for handling a specific part of the agent’s logic. Here's a high-level overview:
+
+* **Input Node**: Receives user input and updates the conversation state.
+* **Planner Node**: Uses a language model to generate a high-level plan based on the input.
+* **Replanner Node**: Uses a language model to make sure the generated plan is right for the task and reformulates it when not.
+* **Executor Node**: Executes the planned steps, potentially calling external tools or generating responses.
+* **Parser**: Parses the output response of the Executor into a more suitable JSON format.
+* **End Node**: Finalizes the output and returns a response.
+
+The structure supports **iteration** and **looping**, allowing the planner and executor to alternate until the task is completed. This design mirrors how human reasoning unfolds across multiple steps rather than in a single shot.
+
+---
+
+## 🐞 Known Issues & Areas for Improvement
+
+While the prototype demonstrates the core features of LangGraph, there are still open challenges and areas that require refinement:
+
+* **⏱️ Time Requirements**:
+  Currently, all steps are processed sequentially. Some tasks (e.g., tool invocations, plan steps) could be parallelized.
+  ➤ **Suggested Fix**: Introduce an intermediate scheduling node before execution to manage task batching and parallelism.
+
+* **🧠 Plan Coherence & Granularity**:
+  The planner sometimes generates overly vague or under-specified plans, which hinders the executor's performance.
+  ➤ **Suggested Fix**: Improve prompt engineering to request more structured and detailed plans from the LLM, potentially including numbered steps or explicit action types.
+
 
 ## 🔧 Setup Instructions
 
